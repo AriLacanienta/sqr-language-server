@@ -1,0 +1,88 @@
+{
+    java.specification.version=18, 
+    sun.cpu.isalist=amd64, 
+    sun.jnu.encoding=Cp1252, 
+    java.class.path=C:\Users\arire\Repos\sqrls\sqr-language-server\target\classes;
+                    C:\Users\arire\.m2\repository\org\eclipse\lsp4j\org.eclipse.lsp4j\0.14.0\org.eclipse.lsp4j-0.14.0.jar;
+                    C:\Users\arire\.m2\repository\org\eclipse\lsp4j\org.eclipse.lsp4j.generator\0.14.0\org.eclipse.lsp4j.generator-0.14.0.jar;
+                    C:\Users\arire\.m2\repository\org\eclipse\xtend\org.eclipse.xtend.lib\2.24.0\org.eclipse.xtend.lib-2.24.0.jar;
+                    C:\Users\arire\.m2\repository\org\eclipse\xtext\org.eclipse.xtext.xbase.lib\2.24.0\org.eclipse.xtext.xbase.lib-2.24.0.jar;
+                    C:\Users\arire\.m2\repository\com\google\guava\guava\27.1-jre\guava-27.1-jre.jar;
+                    C:\Users\arire\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;
+                    C:\Users\arire\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;
+                    C:\Users\arire\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\arire\.m2\repository\org\checkerframework\checker-qual\2.5.2\checker-qual-2.5.2.jar;
+                    C:\Users\arire\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;
+                    C:\Users\arire\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;
+                    C:\Users\arire\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;
+                    C:\Users\arire\.m2\repository\org\eclipse\xtend\org.eclipse.xtend.lib.macro\2.24.0\org.eclipse.xtend.lib.macro-2.24.0.jar;
+                    C:\Users\arire\.m2\repository\org\eclipse\lsp4j\org.eclipse.lsp4j.jsonrpc\0.14.0\org.eclipse.lsp4j.jsonrpc-0.14.0.jar;
+                    C:\Users\arire\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar, 
+    java.vm.vendor=Oracle Corporation, 
+    sun.arch.data.model=64, 
+    user.variant=, 
+    java.vendor.url=https://java.oracle.com/, 
+    java.vm.specification.version=18, 
+    os.name=Windows 10, 
+    sun.java.launcher=SUN_STANDARD, 
+    user.country=US, 
+    sun.boot.library.path=C:\Program Files\Java\jdk-18.0.1.1\bin, 
+    sun.java.command=dev.arilac.SqrLanguageServerLauncher, 
+    jdk.debug=release, 
+    sun.cpu.endian=little, 
+    user.home=C:\Users\arire, 
+    user.language=en, 
+    sun.stderr.encoding=cp437, 
+    java.specification.vendor=Oracle Corporation, 
+    java.version.date=2022-04-22, 
+    java.home=C:\Program Files\Java\jdk-18.0.1.1, 
+    file.separator=\, 
+    java.vm.compressedOopsMode=32-bit, 
+    line.separator=
+, 
+    sun.stdout.encoding=cp437, 
+    java.vm.specification.vendor=Oracle Corporation, 
+    java.specification.name=Java Platform API Specification, 
+    user.script=, 
+    sun.management.compiler=HotSpot 64-Bit Tiered Compilers, 
+    java.runtime.version=18.0.1.1+2-6, 
+    user.name=arire, 
+    path.separator=;, 
+    os.version=10.0, 
+    java.runtime.name=Java(TM) SE Runtime Environment, 
+    file.encoding=UTF-8, 
+    java.vm.name=Java HotSpot(TM) 64-Bit Server VM, 
+    java.vendor.url.bug=https://bugreport.java.com/bugreport/, 
+    java.io.tmpdir=C:\Users\arire\AppData\Local\Temp\, 
+    java.version=18.0.1.1, 
+    user.dir=C:\Users\arire\Repos\sqrls\sqr-language-server, 
+    os.arch=amd64, 
+    java.vm.specification.name=Java Virtual Machine Specification, 
+    sun.os.patch.level=, 
+    native.encoding=Cp1252, 
+    java.library.path=C:\Program Files\Java\jdk-18.0.1.1\bin;
+                    C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;
+                    C:\WINDOWS;
+                    C:\Program Files\Common Files\Oracle\Java\javapath;
+                    C:\WINDOWS\system32;
+                    C:\WINDOWS;
+                    C:\WINDOWS\System32\Wbem;
+                    C:\WINDOWS\System32\WindowsPowerShell\v1.0\;
+                    C:\WINDOWS\System32\OpenSSH\;
+                    C:\Program Files\dotnet\;
+                    C:\Program Files\nodejs\;
+                    C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;
+                    C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;
+                    %M2_HOME%\bin;
+                    C:\Users\arire\AppData\Local\Microsoft\WindowsApps;
+                    C:\Users\arire\AppData\Local\Programs\Git\cmd;
+                    C:\Users\arire\AppData\Local\Programs\Microsoft VS Code\bin;
+                    C:\Users\arire\AppData\Roaming\npm;
+                    C:\Program Files\apache-maven-3.8.6\bin;
+                    C:\Program Files\Java\jdk-18.0.1.1\bin;
+                    ;., 
+    java.vm.info=mixed mode, sharing, 
+    java.vendor=Oracle Corporation, 
+    java.vm.version=18.0.1.1+2-6, 
+    sun.io.unicode.encoding=UnicodeLittle, 
+    java.class.version=62.0
+}
