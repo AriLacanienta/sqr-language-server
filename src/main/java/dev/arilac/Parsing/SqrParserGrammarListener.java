@@ -1,4 +1,5 @@
-// Generated from c:\Users\arire\Repos\sqrls\sqr-language-server\src\main\java\dev\arilac\SqrParserGrammar.g4 by ANTLR 4.9.2
+package dev.arilac.Parsing;
+// Generated from .\SqrParserGrammar.g4 by ANTLR 4.12.0
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -46,6 +47,16 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitProcedureArguments(SqrParserGrammar.ProcedureArgumentsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#variable}.
+	 * @param ctx the parse tree
+	 */
+	void enterVariable(SqrParserGrammar.VariableContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#variable}.
+	 * @param ctx the parse tree
+	 */
+	void exitVariable(SqrParserGrammar.VariableContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#arguments}.
 	 * @param ctx the parse tree

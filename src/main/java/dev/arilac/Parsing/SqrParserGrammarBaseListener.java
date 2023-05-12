@@ -1,4 +1,5 @@
-// Generated from c:\Users\arire\Repos\sqrls\sqr-language-server\src\main\java\dev\arilac\SqrParserGrammar.g4 by ANTLR 4.9.2
+package dev.arilac.Parsing;
+// Generated from .\SqrParserGrammar.g4 by ANTLR 4.12.0
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -9,6 +10,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
+@SuppressWarnings("CheckReturnValue")
 public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	/**
 	 * {@inheritDoc}
@@ -58,6 +60,18 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitProcedureArguments(SqrParserGrammar.ProcedureArgumentsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVariable(SqrParserGrammar.VariableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVariable(SqrParserGrammar.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
