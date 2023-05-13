@@ -1,0 +1,6 @@
+begin-procedure my-procedure
+
+let #i = 1
+add 1 to #i
+
+end-procedure
