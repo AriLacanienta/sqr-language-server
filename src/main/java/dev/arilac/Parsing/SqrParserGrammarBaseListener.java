@@ -1,5 +1,4 @@
-package dev.arilac.Parsing;
-// Generated from .\SqrParserGrammar.g4 by ANTLR 4.12.0
+// Generated from ./src/main/java/dev/arilac/Parsing/SqrParserGrammar.g4 by ANTLR 4.12.0
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;

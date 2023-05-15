@@ -12,15 +12,20 @@ LCURLY : '{' ;
 RCURLY : '}' ;
 COLON: ':' ;
 
+INCLUDE: '#' I N C L U D E;
 ADD : A D D;
 TO : T O;
+ROUND : R O U N D;
 BEGIN_PROG : BEGIN '-' PROGRAM;
 END_PROG : END '-' PROGRAM;
 BEGIN_PROCEDURE : BEGIN '-' P R O C E D U R E;
 END_PROCEDURE : END '-' P R O C E D U R E;
-LET : L E T;
 LOCAL : L O C A L;
-INCLUDE: '#' I N C L U D E;
+LET : L E T;
+STOP : S T O P;
+QUIET : Q U I E T;
+SUBTRACT : S U B T R A C T;
+FROM : F R O M;
 
 LOCAL_LOCAL : L O C A L '-' L O C A L;
 
@@ -29,7 +34,7 @@ NUM_VAR : '#'IDENTIFIER;
 COL_VAR : '&'IDENTIFIER;
 LST_VAR : '%'IDENTIFIER;
 
-VAR: STR_VAR
+fragment VAR: STR_VAR
 | NUM_VAR
 | COL_VAR
 ;
@@ -43,11 +48,9 @@ fragment PROGRAM : P R O G R A M | R E P O R T;
 
 
 
-
-
 INT : [0-9]+ ;
 IDENTIFIER : [a-zA-Z_][a-zA-Z_0-9-]* ;
-WS: [ \t\r\f]+ -> channel(HIDDEN) ;
+WS: [ \t\r\n\f]+ -> channel(HIDDEN) ;
 LINE_COMMENT : '!'~[\r\n]* -> channel(HIDDEN);
 
 STR_LIT : '\''.*?'\'';

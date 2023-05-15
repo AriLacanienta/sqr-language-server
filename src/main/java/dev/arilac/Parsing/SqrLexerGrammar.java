@@ -1,5 +1,4 @@
-package dev.arilac.Parsing;
-// Generated from .\SqrLexerGrammar.g4 by ANTLR 4.12.0
+// Generated from ./src/main/java/dev/arilac/Parsing/SqrLexerGrammar.g4 by ANTLR 4.12.0
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

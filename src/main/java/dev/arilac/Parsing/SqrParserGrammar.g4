@@ -2,6 +2,18 @@ parser grammar SqrParserGrammar;
 
 options { tokenVocab=SqrLexerGrammar; }
 
+numeric
+: NUM_VAR
+| COL_VAR
+| INT
+;
+
+variable
+: STR_VAR
+| NUM_VAR
+| COL_VAR
+;
+
 program
     : procedure EOF
     ;
@@ -17,12 +29,6 @@ procedureArguments
 | 
 ;
 
-variable
-: STR_VAR
-| NUM_VAR
-| COL_VAR
-;
-
 arguments
 : variable
 | variable ',' arguments
@@ -36,16 +42,31 @@ returnArg
 ;
 
 procedureBody
-: sqrCommand
-| sqrCommand procedureBody
+: procedureBody sqrCommand
+| sqrCommand
+|
 ;
 
 sqrCommand
 : add
 | let
+| stop
+| subtract
 ;
 
-add : ADD INT TO NUM_VAR;
+add 
+: ADD numeric TO NUM_VAR
+| ADD numeric TO NUM_VAR ROUND '=' INT;
 
-let : LET VAR '=' INT ;
+stop
+: STOP
+| STOP QUIET
+;
+
+subtract 
+: SUBTRACT numeric FROM NUM_VAR
+| SUBTRACT numeric FROM NUM_VAR ROUND '=' INT;
+
+
+let : LET variable '=' INT ;
 

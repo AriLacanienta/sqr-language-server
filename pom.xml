@@ -110,7 +110,6 @@
                 <goal>copy-resources</goal>
               </goals>
               <configuration>
-                <outputDirectory>${basedir}/laguage_server_lib</outputDirectory>
                 <resources>
                   <resource>
                     <directory>${basedir}/target</directory>
@@ -118,6 +117,7 @@
                     <filtering>false</filtering>
                   </resource>
                 </resources>
+                <outputDirectory>${basedir}/laguage_server_lib</outputDirectory>
               </configuration>
             </execution>
           </executions>
