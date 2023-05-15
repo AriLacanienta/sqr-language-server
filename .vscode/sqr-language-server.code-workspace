@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"name": "sqr-language-server",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive",
+		"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
+		"java.compile.nullAnalysis.mode": "disabled",
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#8f2700",
+			"activityBar.background": "#8f2700",
+			"activityBar.foreground": "#e7e7e7",
+			"activityBar.inactiveForeground": "#e7e7e799",
+			"activityBarBadge.background": "#002009",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"commandCenter.border": "#e7e7e799",
+			"sash.hoverBorder": "#8f2700",
+			"statusBar.background": "#5c1900",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#8f2700",
+			"statusBarItem.remoteBackground": "#5c1900",
+			"statusBarItem.remoteForeground": "#e7e7e7",
+			"titleBar.activeBackground": "#5c1900",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.inactiveBackground": "#5c190099",
+			"titleBar.inactiveForeground": "#e7e7e799"
+		},
+		"peacock.color": "#5c1900"
+	}
+}

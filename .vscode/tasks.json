@@ -1,0 +1,42 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "verify",
+            "type": "shell",
+            "command": "mvn -B verify",
+            "group": "build"
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "mvn -B test",
+            "group": "test"
+        },
+		{
+			"label": "Generate ANTLR files",
+			"detail": "",
+			"type": "shell",
+			"command": "antlr4",
+			"args": [
+                "./src/main/java/dev/arilac/Parsing/SqrLexerGrammar.g4",
+                "./src/main/java/dev/arilac/Parsing/SqrParserGrammar.g4",
+                "-o",  "./src/main/java/dev/arilac/Parsing"
+            ]
+		},
+        {
+            "label": "Parse Test File",
+            "type": "shell",
+            "command": "antlr4-parse",
+            "args": [
+                "./src/main/java/dev/arilac/Parsing/SqrParserGrammar.g4",
+                "./src/main/java/dev/arilac/Parsing/SqrLexerGrammar.g4",
+                "program",
+                "-gui",
+                "./src/test/java/dev/arilac/testfile.sqr/"
+            ]
+        }
+    ]
+}
