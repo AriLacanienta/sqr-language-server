@@ -32,6 +32,19 @@ LCURLY : '{' ;
 RCURLY : '}' ;
 COLON: ':' ;
 
+ABS : A B S;
+ACOS : A C O S;
+ASIN : A S I N;
+ATAN : A T A N;
+CEIL : C E I L;
+COS : C O S;
+COSH : C O S H;
+DEG : D E G;
+E10 : E'10';
+SIN : S I N;
+TAN : T A N;
+
+
 INCLUDE: '#' I N C L U D E;
 ADD : A D D;
 TO : T O;
@@ -65,10 +78,10 @@ fragment PROCEDURE : P R O C E D U R E;
 fragment PROGRAM : P R O G R A M | R E P O R T;
 
 
-INT : [0-9]+ ;
+INT : [-+]?[0-9]+ ;
 // TODO: Can you have multiple digits before the '.' ?
-DEC : [0-9] '.' [0-9]+ E [0-9]+;
-FLT : [0-9]* '.' [0-9]+;
+DEC : [-+]?[0-9] '.' [0-9]+ E [0-9]+;
+FLT : [-+]?[0-9]* '.' [0-9]+;
 IDENTIFIER : [a-zA-Z_][a-zA-Z_0-9-]* ;
 WS: [ \t\r\n\f-]+ -> channel(HIDDEN) ;
 LINE_COMMENT : '!'~[\r\n]* -> channel(HIDDEN);

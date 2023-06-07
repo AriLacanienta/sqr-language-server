@@ -40,6 +40,26 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 */
 	void exitLiteral(SqrParserGrammar.LiteralContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#func_keyword}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunc_keyword(SqrParserGrammar.Func_keywordContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#func_keyword}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunc_keyword(SqrParserGrammar.Func_keywordContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#function}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction(SqrParserGrammar.FunctionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#function}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction(SqrParserGrammar.FunctionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#operator}.
 	 * @param ctx the parse tree
 	 */

@@ -27,6 +27,19 @@ literal
 | STR_LIT
 ;
 
+func_keyword
+: ABS
+| ACOS
+| ASIN
+| ATAN
+| CEIL
+| COS
+| SIN
+| TAN
+;
+
+function : func_keyword'('expression')';
+
 operator
 : CONCAT
 | EXPONENT
@@ -50,12 +63,13 @@ operator
 operand
 : variable
 | literal
+| function
 ;
 
 expression
-: operand 
+: operand
 | operand operator operand
-| expression operator operand
+| operand operator expression
 ;
 
 program
