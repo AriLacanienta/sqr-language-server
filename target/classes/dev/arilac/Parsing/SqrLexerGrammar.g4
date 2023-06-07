@@ -1,9 +1,43 @@
 lexer grammar SqrLexerGrammar;
 
+CONCAT : '||' ;
+EXPONENT : '^' ;
+MULT : '*' ;
+DIV : '/' ;
+PLUS : '+' ;
+MINUS : '-' ;
+
+GT : '>' ;
+LT : '<' ;
+GTE : '>=' ;
+LTE : '<=' ;
+NEQ : '!=' | '<>' ;
+EQ : '=' ;
+
+NOT : 'not' ;
 AND : 'and' ;
 OR : 'or' ;
-NOT : 'not' ;
-EQ : '=' ;
+XOR: 'xor';
+
+OPERATOR
+: CONCAT
+| EXPONENT
+| MULT
+| DIV
+| PLUS
+| MINUS
+| GT
+| LT
+| GTE
+| LTE
+| NEQ
+| EQ
+| NOT
+| AND
+| OR
+| XOR
+;
+
 COMMA : ',' ;
 SEMI : ';' ;
 LPAREN : '(' ;
@@ -12,15 +46,20 @@ LCURLY : '{' ;
 RCURLY : '}' ;
 COLON: ':' ;
 
+INCLUDE: '#' I N C L U D E;
 ADD : A D D;
 TO : T O;
+ROUND : R O U N D;
 BEGIN_PROG : BEGIN '-' PROGRAM;
 END_PROG : END '-' PROGRAM;
 BEGIN_PROCEDURE : BEGIN '-' P R O C E D U R E;
 END_PROCEDURE : END '-' P R O C E D U R E;
-LET : L E T;
 LOCAL : L O C A L;
-INCLUDE: '#' I N C L U D E;
+LET : L E T;
+STOP : S T O P;
+QUIET : Q U I E T;
+SUBTRACT : S U B T R A C T;
+FROM : F R O M;
 
 LOCAL_LOCAL : L O C A L '-' L O C A L;
 
@@ -29,12 +68,10 @@ NUM_VAR : '#'IDENTIFIER;
 COL_VAR : '&'IDENTIFIER;
 LST_VAR : '%'IDENTIFIER;
 
-VAR: STR_VAR
-| NUM_VAR
-| COL_VAR
-;
 
-RETVAR: ':'VAR;
+RETVAR
+: ':'STR_VAR
+| ':'NUM_VAR;
 
 fragment BEGIN : B E G I N;
 fragment END : E N D;
@@ -43,42 +80,40 @@ fragment PROGRAM : P R O G R A M | R E P O R T;
 
 
 
-
-
 INT : [0-9]+ ;
 IDENTIFIER : [a-zA-Z_][a-zA-Z_0-9-]* ;
-WS: [ \t\r\f]+ -> channel(HIDDEN) ;
+WS: [ \t\r\n\f-]+ -> channel(HIDDEN) ;
 LINE_COMMENT : '!'~[\r\n]* -> channel(HIDDEN);
 
 STR_LIT : '\''.*?'\'';
 
 
-fragment A : [aA];
-fragment B : [bB];
-fragment C : [cC];
-fragment D : [dD];
-fragment E : [eE];
-fragment F : [fF];
-fragment G : [gG];
-fragment H : [hH];
-fragment I : [iI];
-fragment J : [jJ];
-fragment K : [kK];
-fragment L : [lL];
-fragment M : [mM];
-fragment N : [nN];
-fragment O : [oO];
-fragment P : [pP];
-fragment Q : [qQ];
-fragment R : [rR];
-fragment S : [sS];
-fragment T : [tT];
-fragment U : [uU];
-fragment V : [vV];
-fragment W : [wW];
-fragment X : [xX];
-fragment Y : [yY];
-fragment Z : [zZ];
+fragment A : [Aa];
+fragment B : [Bb];
+fragment C : [Cc];
+fragment D : [Dd];
+fragment E : [Ee];
+fragment F : [Ff];
+fragment G : [Gg];
+fragment H : [Hh];
+fragment I : [Ii];
+fragment J : [Jj];
+fragment K : [Kk];
+fragment L : [Ll];
+fragment M : [Mm];
+fragment N : [Nn];
+fragment O : [Oo];
+fragment P : [Pp];
+fragment Q : [Qq];
+fragment R : [Rr];
+fragment S : [Ss];
+fragment T : [Tt];
+fragment U : [Uu];
+fragment V : [Vv];
+fragment W : [Ww];
+fragment X : [Xx];
+fragment Y : [Yy];
+fragment Z : [Zz];
 
 
 

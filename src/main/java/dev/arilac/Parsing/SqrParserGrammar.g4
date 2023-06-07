@@ -14,8 +14,21 @@ variable
 | COL_VAR
 ;
 
+expression
+: operand OPERATOR operand;
+
+operator
+: CONCAT
+| EXPONENT
+;
+
+operand
+:
+;
+
 program
-    : procedure EOF
+    : program procedure
+    | procedure EOF
     ;
     
 procedure 
@@ -30,10 +43,15 @@ procedureArguments
 ;
 
 arguments
-: variable
-| variable ',' arguments
+: arg
+| arg ',' arguments
+| arguments ',' returnArg
 | returnArg
-| variable ',' returnArg
+;
+
+arg
+: STR_VAR
+| NUM_VAR
 ;
 
 returnArg
@@ -42,9 +60,8 @@ returnArg
 ;
 
 procedureBody
-: procedureBody sqrCommand
+: sqrCommand procedureBody
 | sqrCommand
-|
 ;
 
 sqrCommand
@@ -68,5 +85,7 @@ subtract
 | SUBTRACT numeric FROM NUM_VAR ROUND '=' INT;
 
 
-let : LET variable '=' INT ;
+let 
+: LET NUM_VAR '=' numeric
+;
 

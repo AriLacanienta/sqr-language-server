@@ -1,10 +1,5 @@
-begin-procedure my-procedure($var1, #var2, &var3)
+begin-procedure my-procedure
 
-let #i = 1
 add 1 to #i
-add #j to #i round = 12
-subtract #j from #i round=1
-stop 
-stop quiet
 
 end-procedure

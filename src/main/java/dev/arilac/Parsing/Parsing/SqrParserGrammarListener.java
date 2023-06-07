@@ -17,16 +17,6 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 */
 	void exitNumeric(SqrParserGrammar.NumericContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SqrParserGrammar#variable}.
-	 * @param ctx the parse tree
-	 */
-	void enterVariable(SqrParserGrammar.VariableContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SqrParserGrammar#variable}.
-	 * @param ctx the parse tree
-	 */
-	void exitVariable(SqrParserGrammar.VariableContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#expression}.
 	 * @param ctx the parse tree
 	 */
@@ -106,16 +96,6 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitArguments(SqrParserGrammar.ArgumentsContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SqrParserGrammar#arg}.
-	 * @param ctx the parse tree
-	 */
-	void enterArg(SqrParserGrammar.ArgContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SqrParserGrammar#arg}.
-	 * @param ctx the parse tree
-	 */
-	void exitArg(SqrParserGrammar.ArgContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#returnArg}.
 	 * @param ctx the parse tree

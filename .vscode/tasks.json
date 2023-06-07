@@ -10,7 +10,7 @@
             "group": "build"
         },
         {
-            "label": "test",
+            "label": "Maven Test",
             "type": "shell",
             "command": "mvn -B test",
             "group": "test"
@@ -24,10 +24,12 @@
                 "./src/main/java/dev/arilac/Parsing/SqrLexerGrammar.g4",
                 "./src/main/java/dev/arilac/Parsing/SqrParserGrammar.g4",
                 "-o",  "./src/main/java/dev/arilac/Parsing"
-            ]
+            ],
+            "group": "build"
 		},
         {
-            "label": "Parse Test File",
+            "label": "Test ANTLR grammar - GUI",
+            "detail": "Run parser on test file and display the parse tree in the GUI",
             "type": "shell",
             "command": "antlr4-parse",
             "args": [
@@ -36,7 +38,22 @@
                 "program",
                 "-gui",
                 "./src/test/java/dev/arilac/testfile.sqr/"
-            ]
+            ],
+            "group": "test"
+        },
+        {
+            "label": "Test ANTLR grammar - trace",
+            "detail": "Run parser on test file and display the parse tree in the GUI",
+            "type": "shell",
+            "command": "antlr4-parse",
+            "args": [
+                "./src/main/java/dev/arilac/Parsing/SqrParserGrammar.g4",
+                "./src/main/java/dev/arilac/Parsing/SqrLexerGrammar.g4",
+                "program",
+                "-trace",
+                "./src/test/java/dev/arilac/testfile.sqr/"
+            ],
+            "group": "test"
         }
     ]
 }
