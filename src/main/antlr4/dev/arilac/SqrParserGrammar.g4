@@ -50,12 +50,12 @@ operator
 operand
 : variable
 | literal
-| expression
 ;
 
 expression
 : operand 
 | operand operator operand
+| expression operator operand
 ;
 
 program
