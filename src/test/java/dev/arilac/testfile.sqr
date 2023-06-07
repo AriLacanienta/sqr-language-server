@@ -1,5 +1,5 @@
 begin-procedure my-procedure
 
-add 1 to #i
+let #myVar  = 1  +  8.0e68894 + 2 
 
 end-procedure

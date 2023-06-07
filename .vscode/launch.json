@@ -10,7 +10,7 @@
             "type": "antlr-debug",
             "request": "launch",
             "input": "src/test/java/dev/arilac/testfile.sqr",
-            "grammar": "src/main/java/dev/arilac/Parsing/SqrParserGrammar.g4",
+            "grammar": "src/main/antlr4/dev/arilac/SqrParserGrammar.g4",
             "startRule": "program",
             "printParseTree": true,
             "visualParseTree": true

@@ -30,15 +30,15 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 */
 	void exitVariable(SqrParserGrammar.VariableContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SqrParserGrammar#expression}.
+	 * Enter a parse tree produced by {@link SqrParserGrammar#literal}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(SqrParserGrammar.ExpressionContext ctx);
+	void enterLiteral(SqrParserGrammar.LiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SqrParserGrammar#expression}.
+	 * Exit a parse tree produced by {@link SqrParserGrammar#literal}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(SqrParserGrammar.ExpressionContext ctx);
+	void exitLiteral(SqrParserGrammar.LiteralContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#operator}.
 	 * @param ctx the parse tree
@@ -59,6 +59,16 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitOperand(SqrParserGrammar.OperandContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpression(SqrParserGrammar.ExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpression(SqrParserGrammar.ExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#program}.
 	 * @param ctx the parse tree

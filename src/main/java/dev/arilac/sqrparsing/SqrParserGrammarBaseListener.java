@@ -42,13 +42,13 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(SqrParserGrammar.ExpressionContext ctx) { }
+	@Override public void enterLiteral(SqrParserGrammar.LiteralContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(SqrParserGrammar.ExpressionContext ctx) { }
+	@Override public void exitLiteral(SqrParserGrammar.LiteralContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -73,6 +73,18 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitOperand(SqrParserGrammar.OperandContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpression(SqrParserGrammar.ExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpression(SqrParserGrammar.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

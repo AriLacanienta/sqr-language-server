@@ -10,6 +10,8 @@ numeric
 : NUM_VAR
 | COL_VAR
 | INT
+| FLT
+| DEC
 ;
 
 variable
@@ -18,16 +20,42 @@ variable
 | COL_VAR
 ;
 
-expression
-: operand OPERATOR operand;
+literal
+: INT
+| FLT
+| DEC
+| STR_LIT
+;
 
 operator
 : CONCAT
 | EXPONENT
+| MULT
+| DIV
+| MOD
+| PLUS
+| MINUS
+| GT
+| LT
+| GTE
+| LTE
+| NEQ
+| EQ
+| NOT
+| AND
+| OR
+| XOR
 ;
 
 operand
-:
+: variable
+| literal
+| expression
+;
+
+expression
+: operand 
+| operand operator operand
 ;
 
 program
@@ -90,6 +118,6 @@ subtract
 
 
 let 
-: LET NUM_VAR '=' numeric
+: LET variable EQ expression
 ;
 

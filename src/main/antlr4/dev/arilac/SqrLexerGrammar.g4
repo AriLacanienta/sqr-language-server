@@ -8,6 +8,7 @@ CONCAT : '||' ;
 EXPONENT : '^' ;
 MULT : '*' ;
 DIV : '/' ;
+MOD : '%';
 PLUS : '+' ;
 MINUS : '-' ;
 
@@ -22,25 +23,6 @@ NOT : 'not' ;
 AND : 'and' ;
 OR : 'or' ;
 XOR: 'xor';
-
-OPERATOR
-: CONCAT
-| EXPONENT
-| MULT
-| DIV
-| PLUS
-| MINUS
-| GT
-| LT
-| GTE
-| LTE
-| NEQ
-| EQ
-| NOT
-| AND
-| OR
-| XOR
-;
 
 COMMA : ',' ;
 SEMI : ';' ;
@@ -83,8 +65,10 @@ fragment PROCEDURE : P R O C E D U R E;
 fragment PROGRAM : P R O G R A M | R E P O R T;
 
 
-
 INT : [0-9]+ ;
+// TODO: Can you have multiple digits before the '.' ?
+DEC : [0-9] '.' [0-9]+ E [0-9]+;
+FLT : [0-9]* '.' [0-9]+;
 IDENTIFIER : [a-zA-Z_][a-zA-Z_0-9-]* ;
 WS: [ \t\r\n\f-]+ -> channel(HIDDEN) ;
 LINE_COMMENT : '!'~[\r\n]* -> channel(HIDDEN);
