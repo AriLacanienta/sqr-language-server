@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "1.0.0",
     "configurations": [
+        
         {
             "name": "Debug ANTLR4 grammar",
             "type": "antlr-debug",

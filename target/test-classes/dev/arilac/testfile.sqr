@@ -1,0 +1,5 @@
+begin-procedure my-procedure
+
+add 1 to #i
+
+end-procedure
