@@ -1,5 +1,9 @@
 lexer grammar SqrLexerGrammar;
 
+@header {
+package dev.arilac.sqrparsing;
+}
+
 CONCAT : '||' ;
 EXPONENT : '^' ;
 MULT : '*' ;

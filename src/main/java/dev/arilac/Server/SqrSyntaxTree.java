@@ -1,4 +1,4 @@
-package dev.arilac.Server;
+package dev.arilac.server;
 
 import java.io.File;
 import java.io.FileReader;
@@ -7,11 +7,11 @@ import java.io.IOException;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
-import org.eclipse.lsp4j.TextDocumentItem;
 
-import dev.arilac.Parsing.SqrLexerGrammar;
-import dev.arilac.Parsing.SqrParserGrammar;
-import dev.arilac.Parsing.SqrParserGrammar.ProgramContext;
+
+import dev.arilac.sqrparsing.SqrLexerGrammar;
+import dev.arilac.sqrparsing.SqrParserGrammar;
+import dev.arilac.sqrparsing.SqrParserGrammar.ProgramContext;
 
 public class SqrSyntaxTree {
 

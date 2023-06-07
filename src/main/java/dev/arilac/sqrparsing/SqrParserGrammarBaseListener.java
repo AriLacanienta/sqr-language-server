@@ -1,4 +1,7 @@
-// Generated from c:\Users\arire\Repos\sqrls\sqr-language-server\src\main\java\dev\arilac\Parsing\SqrParserGrammar.g4 by ANTLR 4.9.2
+// Generated from c:\Users\arire\Repos\sqrls\sqr-language-server\src\main\antlr4\dev\arilac\SqrParserGrammar.g4 by ANTLR 4.9.2
+
+package dev.arilac.sqrparsing;
+
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -22,6 +25,18 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNumeric(SqrParserGrammar.NumericContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVariable(SqrParserGrammar.VariableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVariable(SqrParserGrammar.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -118,6 +133,18 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitArguments(SqrParserGrammar.ArgumentsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArg(SqrParserGrammar.ArgContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArg(SqrParserGrammar.ArgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

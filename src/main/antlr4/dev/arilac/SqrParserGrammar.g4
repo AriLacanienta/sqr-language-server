@@ -1,5 +1,9 @@
 parser grammar SqrParserGrammar;
 
+@header {
+package dev.arilac.sqrparsing;
+}
+
 options { tokenVocab=SqrLexerGrammar; }
 
 numeric

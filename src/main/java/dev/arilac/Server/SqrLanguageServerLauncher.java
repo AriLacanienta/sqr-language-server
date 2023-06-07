@@ -1,4 +1,4 @@
-package dev.arilac.Server;
+package dev.arilac.server;
 
 import java.io.File;
 import java.io.IOException;

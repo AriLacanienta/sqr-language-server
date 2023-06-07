@@ -1,4 +1,7 @@
-// Generated from c:\Users\arire\Repos\sqrls\sqr-language-server\src\main\java\dev\arilac\Parsing\SqrLexerGrammar.g4 by ANTLR 4.9.2
+// Generated from c:\Users\arire\Repos\sqrls\sqr-language-server\src\main\antlr4\dev\arilac\SqrLexerGrammar.g4 by ANTLR 4.9.2
+
+package dev.arilac.sqrparsing;
+
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
