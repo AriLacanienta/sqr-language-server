@@ -21,9 +21,9 @@
 			"type": "shell",
 			"command": "antlr4",
 			"args": [
-                "./src/main/java/dev/arilac/Parsing/SqrLexerGrammar.g4",
-                "./src/main/java/dev/arilac/Parsing/SqrParserGrammar.g4",
-                "-o",  "./src/main/java/dev/arilac/Parsing"
+                "./src/main/antlr4/dev/arilac/SqrLexerGrammar.g4",
+                "./src/main/antlr4/dev/arilac/SqrParserGrammar.g4",
+                "-o",  "./src/test/antlr4/dev/arilac/parsing"
             ],
             "group": "build"
 		},
@@ -33,8 +33,8 @@
             "type": "shell",
             "command": "antlr4-parse",
             "args": [
-                "./src/main/java/dev/arilac/Parsing/SqrParserGrammar.g4",
-                "./src/main/java/dev/arilac/Parsing/SqrLexerGrammar.g4",
+                "./src/main/antlr4/dev/arilac/SqrParserGrammar.g4",
+                "./src/main/antlr4/dev/arilac/SqrLexerGrammar.g4",
                 "program",
                 "-gui",
                 "./src/test/java/dev/arilac/testfile.sqr/"
@@ -47,8 +47,8 @@
             "type": "shell",
             "command": "antlr4-parse",
             "args": [
-                "./src/main/java/dev/arilac/Parsing/SqrParserGrammar.g4",
-                "./src/main/java/dev/arilac/Parsing/SqrLexerGrammar.g4",
+                "./src/main/antlr4/dev/arilac/SqrParserGrammar.g4",
+                "./src/main/antlr4/dev/arilac/SqrLexerGrammar.g4",
                 "program",
                 "-trace",
                 "./src/test/java/dev/arilac/testfile.sqr/"
