@@ -142,11 +142,10 @@ fragment END : E N D;
 fragment PROCEDURE : P R O C E D U R E;
 fragment PROGRAM : P R O G R A M | R E P O R T;
 
-// TODO: differentiate between add/sub and sign prefix
-INT : [-+]?[0-9]+ ;
+INT : [0-9]+ ;
 // TODO: Can you have multiple digits before the '.' ?
-DEC : [-+]?[0-9] '.' [0-9]+ E [0-9]+;
-FLT : [-+]?[0-9]* '.' [0-9]+;
+DEC : [0-9] '.' [0-9]+ E [0-9]+;
+FLT : [0-9]* '.' [0-9]+;
 STR_LIT : '\''.*?'\'';
 IDENTIFIER : [a-zA-Z_][a-zA-Z_0-9-]* ;
 WS: [ \t\r\n\f-]+ -> channel(HIDDEN) ;

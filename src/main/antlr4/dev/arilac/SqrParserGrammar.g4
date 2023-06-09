@@ -108,18 +108,26 @@ variable
 ;
 
 literal
+: num_lit
+| STR_LIT
+;
+
+number
 : INT
 | FLT
 | DEC
-| STR_LIT
+;
+
+num_lit
+: number
+| PLUS number
+| MINUS number
 ;
 
 numeric
 : NUM_VAR
 | COL_VAR
-| INT
-| FLT
-| DEC
+| num_lit
 ;
 
 function 
@@ -212,4 +220,3 @@ subtract
 : SUBTRACT numeric FROM NUM_VAR
 | SUBTRACT numeric FROM NUM_VAR ROUND '=' INT
 ;
-
