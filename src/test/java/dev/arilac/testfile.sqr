@@ -1,5 +1,6 @@
 begin-procedure my-procedure
 
-let #myVar  = 1  +  8.0e68894 + 2 
+if not range(upper($code), 'A', 'G')
+end-if
 
 end-procedure
