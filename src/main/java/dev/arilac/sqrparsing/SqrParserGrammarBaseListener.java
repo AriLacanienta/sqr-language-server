@@ -138,13 +138,13 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIf(SqrParserGrammar.IfContext ctx) { }
+	@Override public void enterIf_statement(SqrParserGrammar.If_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIf(SqrParserGrammar.IfContext ctx) { }
+	@Override public void exitIf_statement(SqrParserGrammar.If_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -217,6 +217,30 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLiteral(SqrParserGrammar.LiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNumber(SqrParserGrammar.NumberContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNumber(SqrParserGrammar.NumberContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNum_lit(SqrParserGrammar.Num_litContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNum_lit(SqrParserGrammar.Num_litContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

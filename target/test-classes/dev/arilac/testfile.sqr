@@ -1,6 +1,11 @@
 begin-procedure my-procedure
 
 if not range(upper($code), 'A', 'G')
+
+    let #i = 1
+
 end-if
+
+
 
 end-procedure

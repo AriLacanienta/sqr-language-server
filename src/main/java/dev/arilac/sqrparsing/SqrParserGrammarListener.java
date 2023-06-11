@@ -110,15 +110,15 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 */
 	void exitAdd(SqrParserGrammar.AddContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SqrParserGrammar#if}.
+	 * Enter a parse tree produced by {@link SqrParserGrammar#if_statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterIf(SqrParserGrammar.IfContext ctx);
+	void enterIf_statement(SqrParserGrammar.If_statementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SqrParserGrammar#if}.
+	 * Exit a parse tree produced by {@link SqrParserGrammar#if_statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitIf(SqrParserGrammar.IfContext ctx);
+	void exitIf_statement(SqrParserGrammar.If_statementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#let}.
 	 * @param ctx the parse tree
@@ -179,6 +179,26 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLiteral(SqrParserGrammar.LiteralContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#number}.
+	 * @param ctx the parse tree
+	 */
+	void enterNumber(SqrParserGrammar.NumberContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#number}.
+	 * @param ctx the parse tree
+	 */
+	void exitNumber(SqrParserGrammar.NumberContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#num_lit}.
+	 * @param ctx the parse tree
+	 */
+	void enterNum_lit(SqrParserGrammar.Num_litContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#num_lit}.
+	 * @param ctx the parse tree
+	 */
+	void exitNum_lit(SqrParserGrammar.Num_litContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#numeric}.
 	 * @param ctx the parse tree

@@ -50,7 +50,7 @@ procedureBody
 
 sqrCommand
 : add
-| if
+| if_statement
 | let
 | stop
 | subtract
@@ -61,8 +61,9 @@ add
 | ADD numeric TO NUM_VAR ROUND '=' INT
 ;
 
-if
-: IF expression procedureBody END_IF;
+if_statement
+: IF expression procedureBody END_IF
+;
 
 let 
 : LET variable EQ expression
