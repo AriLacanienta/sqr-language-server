@@ -117,15 +117,21 @@ END_PROG : END '-' PROGRAM;
 BEGIN_PROCEDURE : BEGIN '-' P R O C E D U R E;
 END_PROCEDURE : END '-' P R O C E D U R E;
 LOCAL : L O C A L;
+EVALUATE : E V A L U A T E;
+WHEN : W H E N;
+WHEN_OTHER : W H E N '-' O T H E R;
+END_EVALUATE : E N D '-' E V A L U A T E;
 IF : I F;
+ELSE : E L S E;
 END_IF : E N D '-' I F;
 LET : L E T;
 STOP : S T O P;
 QUIET : Q U I E T;
 SUBTRACT : S U B T R A C T;
 FROM : F R O M;
-
-LOCAL_LOCAL : L O C A L '-' L O C A L;
+WHILE :  W H I L E;
+BREAK : B R E A K;
+END_WHILE : E N D '-' W H I L E;
 
 STR_VAR : '$'IDENTIFIER;
 NUM_VAR : '#'IDENTIFIER;
@@ -143,7 +149,7 @@ fragment PROCEDURE : P R O C E D U R E;
 fragment PROGRAM : P R O G R A M | R E P O R T;
 
 INT : [0-9]+ ;
-// TODO: Can you have multiple digits before the '.' ?
+// TODO: Can you have zero/multiple digits before the '.' ?
 DEC : [0-9] '.' [0-9]+ E [0-9]+;
 FLT : [0-9]* '.' [0-9]+;
 STR_LIT : '\''.*?'\'';

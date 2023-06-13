@@ -80,15 +80,15 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 */
 	void exitReturnArg(SqrParserGrammar.ReturnArgContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SqrParserGrammar#procedureBody}.
+	 * Enter a parse tree produced by {@link SqrParserGrammar#sqrCommands}.
 	 * @param ctx the parse tree
 	 */
-	void enterProcedureBody(SqrParserGrammar.ProcedureBodyContext ctx);
+	void enterSqrCommands(SqrParserGrammar.SqrCommandsContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SqrParserGrammar#procedureBody}.
+	 * Exit a parse tree produced by {@link SqrParserGrammar#sqrCommands}.
 	 * @param ctx the parse tree
 	 */
-	void exitProcedureBody(SqrParserGrammar.ProcedureBodyContext ctx);
+	void exitSqrCommands(SqrParserGrammar.SqrCommandsContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#sqrCommand}.
 	 * @param ctx the parse tree
@@ -109,6 +109,26 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAdd(SqrParserGrammar.AddContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#evaluate_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterEvaluate_statement(SqrParserGrammar.Evaluate_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#evaluate_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitEvaluate_statement(SqrParserGrammar.Evaluate_statementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#when_block}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhen_block(SqrParserGrammar.When_blockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#when_block}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhen_block(SqrParserGrammar.When_blockContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#if_statement}.
 	 * @param ctx the parse tree
@@ -150,6 +170,16 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 */
 	void exitOperator(SqrParserGrammar.OperatorContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#comparison_operator}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparison_operator(SqrParserGrammar.Comparison_operatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#comparison_operator}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparison_operator(SqrParserGrammar.Comparison_operatorContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#operand}.
 	 * @param ctx the parse tree
 	 */
@@ -159,6 +189,16 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitOperand(SqrParserGrammar.OperandContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#var_or_lit}.
+	 * @param ctx the parse tree
+	 */
+	void enterVar_or_lit(SqrParserGrammar.Var_or_litContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#var_or_lit}.
+	 * @param ctx the parse tree
+	 */
+	void exitVar_or_lit(SqrParserGrammar.Var_or_litContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#variable}.
 	 * @param ctx the parse tree
@@ -259,4 +299,14 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitSubtract(SqrParserGrammar.SubtractContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SqrParserGrammar#while_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile_statement(SqrParserGrammar.While_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SqrParserGrammar#while_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile_statement(SqrParserGrammar.While_statementContext ctx);
 }

@@ -1,10 +1,18 @@
-begin-procedure my-procedure
+begin-procedure my-procedure !this is a comment!
 
-if not range(upper($code), 'A', 'G')
-
-    let #i = 1
-
-end-if
+evaluate $status
+    when = 'active'
+        add 1 to #i
+        break
+    when = 'inactive'
+        subtract 1 from #if
+    when > 3
+    when <= 2
+        let #i = 0
+        break
+    when-other
+        
+end-evaluate
 
 
 

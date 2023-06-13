@@ -9,10 +9,11 @@ options { tokenVocab=SqrLexerGrammar; }
 program
 : program procedure
 | procedure EOF
+|
 ;
     
 procedure 
-: BEGIN_PROCEDURE procedureName procedureArguments procedureBody END_PROCEDURE
+: BEGIN_PROCEDURE procedureName procedureArguments sqrCommands END_PROCEDURE
 ;
 
 procedureName
@@ -42,18 +43,21 @@ returnArg
 | RETVAR',' returnArg
 ;
 
-procedureBody
-: sqrCommand procedureBody
+sqrCommands
+: sqrCommand sqrCommands
 | sqrCommand
 |
 ;
 
 sqrCommand
 : add
+| BREAK
+| evaluate_statement
 | if_statement
 | let
 | stop
 | subtract
+| while_statement
 ;
 
 add 
@@ -61,8 +65,18 @@ add
 | ADD numeric TO NUM_VAR ROUND '=' INT
 ;
 
+evaluate_statement
+: EVALUATE var_or_lit when_block
+;
+
+when_block
+: WHEN comparison_operator var_or_lit sqrCommands
+| WHEN comparison_operator var_or_lit sqrCommands when_block
+;
+
 if_statement
-: IF expression procedureBody END_IF
+: IF expression sqrCommands END_IF
+| IF expression sqrCommands ELSE sqrCommands END_IF
 ;
 
 let 
@@ -96,10 +110,24 @@ operator
 | XOR
 ;
 
+comparison_operator
+: GT
+| LT
+| GTE
+| LTE
+| NEQ
+| EQ
+;
+
 operand
 : variable
 | literal
 | function
+;
+
+var_or_lit
+: variable
+| literal
 ;
 
 variable
@@ -220,4 +248,8 @@ stop
 subtract 
 : SUBTRACT numeric FROM NUM_VAR
 | SUBTRACT numeric FROM NUM_VAR ROUND '=' INT
+;
+
+while_statement
+: WHILE expression sqrCommands END_WHILE
 ;

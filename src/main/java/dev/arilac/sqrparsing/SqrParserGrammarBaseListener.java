@@ -102,13 +102,13 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProcedureBody(SqrParserGrammar.ProcedureBodyContext ctx) { }
+	@Override public void enterSqrCommands(SqrParserGrammar.SqrCommandsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProcedureBody(SqrParserGrammar.ProcedureBodyContext ctx) { }
+	@Override public void exitSqrCommands(SqrParserGrammar.SqrCommandsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -133,6 +133,30 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAdd(SqrParserGrammar.AddContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEvaluate_statement(SqrParserGrammar.Evaluate_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEvaluate_statement(SqrParserGrammar.Evaluate_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterWhen_block(SqrParserGrammar.When_blockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWhen_block(SqrParserGrammar.When_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -186,6 +210,18 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterComparison_operator(SqrParserGrammar.Comparison_operatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitComparison_operator(SqrParserGrammar.Comparison_operatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterOperand(SqrParserGrammar.OperandContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -193,6 +229,18 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitOperand(SqrParserGrammar.OperandContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVar_or_lit(SqrParserGrammar.Var_or_litContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVar_or_lit(SqrParserGrammar.Var_or_litContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -313,6 +361,18 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitSubtract(SqrParserGrammar.SubtractContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterWhile_statement(SqrParserGrammar.While_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWhile_statement(SqrParserGrammar.While_statementContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
