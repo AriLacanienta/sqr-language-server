@@ -7,13 +7,14 @@ package dev.arilac.sqrparsing;
 options { tokenVocab=SqrLexerGrammar; }
 
 program
-: program procedure* EOF
+: procedure* EOF
 ;
     
 procedure 
 : BEGIN_PROCEDURE IDENTIFIER procedureArguments sqrCommand* END_PROCEDURE
 ;
 
+// TODO: require at least 1 argument or return argument when using alternative 1
 procedureArguments
 : '(' proc_arg* (',' proc_arg)* (return_arg)* (',' return_arg)* ')'
 | LOCAL
