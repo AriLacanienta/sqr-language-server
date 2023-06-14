@@ -30,16 +30,6 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 */
 	void exitProcedure(SqrParserGrammar.ProcedureContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SqrParserGrammar#procedureName}.
-	 * @param ctx the parse tree
-	 */
-	void enterProcedureName(SqrParserGrammar.ProcedureNameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SqrParserGrammar#procedureName}.
-	 * @param ctx the parse tree
-	 */
-	void exitProcedureName(SqrParserGrammar.ProcedureNameContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#procedureArguments}.
 	 * @param ctx the parse tree
 	 */
@@ -49,16 +39,6 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitProcedureArguments(SqrParserGrammar.ProcedureArgumentsContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SqrParserGrammar#proc_arguments}.
-	 * @param ctx the parse tree
-	 */
-	void enterProc_arguments(SqrParserGrammar.Proc_argumentsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SqrParserGrammar#proc_arguments}.
-	 * @param ctx the parse tree
-	 */
-	void exitProc_arguments(SqrParserGrammar.Proc_argumentsContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#proc_arg}.
 	 * @param ctx the parse tree
@@ -70,25 +50,15 @@ public interface SqrParserGrammarListener extends ParseTreeListener {
 	 */
 	void exitProc_arg(SqrParserGrammar.Proc_argContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SqrParserGrammar#returnArg}.
+	 * Enter a parse tree produced by {@link SqrParserGrammar#return_arg}.
 	 * @param ctx the parse tree
 	 */
-	void enterReturnArg(SqrParserGrammar.ReturnArgContext ctx);
+	void enterReturn_arg(SqrParserGrammar.Return_argContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SqrParserGrammar#returnArg}.
+	 * Exit a parse tree produced by {@link SqrParserGrammar#return_arg}.
 	 * @param ctx the parse tree
 	 */
-	void exitReturnArg(SqrParserGrammar.ReturnArgContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SqrParserGrammar#sqrCommands}.
-	 * @param ctx the parse tree
-	 */
-	void enterSqrCommands(SqrParserGrammar.SqrCommandsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SqrParserGrammar#sqrCommands}.
-	 * @param ctx the parse tree
-	 */
-	void exitSqrCommands(SqrParserGrammar.SqrCommandsContext ctx);
+	void exitReturn_arg(SqrParserGrammar.Return_argContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SqrParserGrammar#sqrCommand}.
 	 * @param ctx the parse tree

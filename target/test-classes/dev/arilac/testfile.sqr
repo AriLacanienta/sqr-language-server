@@ -1,4 +1,4 @@
-begin-procedure my-procedure !this is a comment!
+begin-procedure my-procedure (:$hello, :$there) !this is a comment!
 
 evaluate $status
     when = 'active'
@@ -11,7 +11,7 @@ evaluate $status
         let #i = 0
         break
     when-other
-        
+
 end-evaluate
 
 

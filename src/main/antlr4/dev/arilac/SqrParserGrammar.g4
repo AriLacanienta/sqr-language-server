@@ -7,30 +7,17 @@ package dev.arilac.sqrparsing;
 options { tokenVocab=SqrLexerGrammar; }
 
 program
-: program procedure
-| procedure EOF
-|
+: program procedure* EOF
 ;
     
 procedure 
-: BEGIN_PROCEDURE procedureName procedureArguments sqrCommands END_PROCEDURE
-;
-
-procedureName
-: IDENTIFIER
+: BEGIN_PROCEDURE IDENTIFIER procedureArguments sqrCommand* END_PROCEDURE
 ;
 
 procedureArguments
-: '(' proc_arguments ')'
+: '(' proc_arg* (',' proc_arg)* (return_arg)* (',' return_arg)* ')'
 | LOCAL
 | 
-;
-
-proc_arguments
-: proc_arg
-| proc_arg ',' proc_arguments
-| proc_arguments ',' returnArg
-| returnArg
 ;
 
 proc_arg
@@ -38,15 +25,9 @@ proc_arg
 | NUM_VAR
 ;
 
-returnArg
+return_arg
 : RETVAR
-| RETVAR',' returnArg
-;
-
-sqrCommands
-: sqrCommand sqrCommands
-| sqrCommand
-|
+| RETVAR',' return_arg
 ;
 
 sqrCommand
@@ -66,17 +47,16 @@ add
 ;
 
 evaluate_statement
-: EVALUATE var_or_lit when_block
-;
+: EVALUATE var_or_lit when_block+ END_EVALUATE;
 
 when_block
-: WHEN comparison_operator var_or_lit sqrCommands
-| WHEN comparison_operator var_or_lit sqrCommands when_block
+: WHEN comparison_operator var_or_lit sqrCommand*
+| WHEN_OTHER sqrCommand*
 ;
 
 if_statement
-: IF expression sqrCommands END_IF
-| IF expression sqrCommands ELSE sqrCommands END_IF
+: IF expression sqrCommand* END_IF
+| IF expression sqrCommand* ELSE sqrCommand* END_IF
 ;
 
 let 
@@ -86,6 +66,7 @@ let
 expression
 : operand
 | NOT expression
+// TODO:  is option 3 necessary?
 | operand operator operand
 | operand operator expression
 ;
@@ -251,5 +232,5 @@ subtract
 ;
 
 while_statement
-: WHILE expression sqrCommands END_WHILE
+: WHILE expression sqrCommand* END_WHILE
 ;

@@ -42,18 +42,6 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProcedureName(SqrParserGrammar.ProcedureNameContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitProcedureName(SqrParserGrammar.ProcedureNameContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterProcedureArguments(SqrParserGrammar.ProcedureArgumentsContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -61,18 +49,6 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitProcedureArguments(SqrParserGrammar.ProcedureArgumentsContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterProc_arguments(SqrParserGrammar.Proc_argumentsContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitProc_arguments(SqrParserGrammar.Proc_argumentsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -90,25 +66,13 @@ public class SqrParserGrammarBaseListener implements SqrParserGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturnArg(SqrParserGrammar.ReturnArgContext ctx) { }
+	@Override public void enterReturn_arg(SqrParserGrammar.Return_argContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturnArg(SqrParserGrammar.ReturnArgContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterSqrCommands(SqrParserGrammar.SqrCommandsContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitSqrCommands(SqrParserGrammar.SqrCommandsContext ctx) { }
+	@Override public void exitReturn_arg(SqrParserGrammar.Return_argContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
